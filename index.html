@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BJ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="overlay"></div>
+
+    <video autoplay muted loop id="myVideo">
+        <source src="Casino Roulette .mp4" type="video/mp4">
+    </video>
+
+    <div class="container">
+        <button id="rules">Game Rules</button>
+        <div class="hidden">
+            <h3>Our Game Rules</h3>
+            <ul>
+                <li>You start the game with $0</li>
+                <li>Each card draw costs $1</li>
+                <li>If you got a Blackjack you win $17</li>
+                <li>If you lose you lose $4</li>
+                <li>Feel free to curse we can't really hear you or give a crap.</li>
+            </ul>
+
+            <p class="center">And most importantly ENJOY!</p>
+        </div>
+
+        <h1 class="title">BLACKJACK</h1>
+        <h2 id="text">Wanna play some Blackjack!</h2>
+        <div class="cards-box">
+            <div class="cards-box-2">
+                <h3>Cards</h3>
+                <h3 id="cards"></h3>
+            </div>
+            <div class="line"></div>
+            <div class="cards-box-2">
+                <h3>Sum</h3>
+                <h3 id="sum"></h3>
+            </div>
+        </div>
+        <div class="box">
+            <button id="start" class="active">Start Game</button>
+            <button id="draw" class="active">Draw More</button>
+        </div>
+
+        <div class="player-info">
+            <h4>Player Name:</h4>
+            <h4 class="bg">Steve</h4>
+            <h4>Money Won:</h4>
+            <h4 id="account" class="bg"></h4>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

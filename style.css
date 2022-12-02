@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #eee;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#myVideo {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.overlay {
+    position: fixed;
+    z-index: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+        radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    position: relative;
+    padding-top: 5em;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+.container * {
+    margin: .5em 0;
+}
+
+.cards-box {
+    display: flex;
+    width: 50%;
+    margin: 3rem auto;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#cards,
+#sum {
+    color: goldenrod;
+}
+
+.line {
+    background: rgb(173, 128, 16);
+    width: 5px;
+    height: 90px;
+    border-radius: 10px;
+}
+
+button {
+    padding: .5em 2em;
+    font-size: 1rem;
+    font-weight: 700;
+    border: 2px solid #000;
+    cursor: pointer;
+    box-shadow: -2px 2px 5px #000;
+    transition: .08s;
+}
+
+.active:active {
+    transform: translateY(2px) translateX(-2px);
+    box-shadow: none;
+}
+
+.box {
+    width: fit-content;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.player-info {
+    border: 3px solid #000;
+    width: fit-content;
+    padding: .5em 1em;
+    margin: 2em auto;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr .5fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.bg {
+    color: goldenrod;
+}
+
+.hidden,
+.hidden * {
+    transition: all 0.5s cubic-bezier(0.5, 1, 0.5, 1);
+    color: #fff;
+}
+
+.hidden {
+    margin-top: unset;
+    border: 2px solid #000;
+    position: absolute;
+    z-index: 1;
+    background-color: #000;
+    overflow: hidden;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 0;
+    opacity: 0;
+}
+
+#rules:focus ~ .hidden {
+    padding: 1em;
+    opacity: 1;
+    height: fit-content;
+}
+
+li {
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.hidden ul {
+    list-style: none;
+    margin-block: 2em;
+    padding-bottom: 1em;
+    border: 1px solid #fff;
+}
+
+.hidden h3 {
+    margin-top: unset;
+    text-align: center;
+}
+
+.hidden p {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.center {
+    text-align: center;
+}
+
+@media (max-width: 680px) {
+
+    .container {
+        font-size: medium;
+    }
+
+    button {
+        font-size: medium;
+    }
+
+    li {
+        font-size: medium;
+    }
+
+    .hidden h3,
+    .hidden p {
+        font-size: medium;
+    }
+}
